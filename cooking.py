@@ -44,14 +44,14 @@ def html(recipie_name, recipie_desc, ingredients, steps):
      <ul>
         """ % (recipie_name, recipie_desc))
     for i in range(len(ingredients)):
-        f.write("<li>%s</li>"%(ingredients[i]))
+        f.write("<li>%s</li>" % (ingredients[i]))
     f.write("""
        </ul>
        <p>Directions</p>
        <ol>
        """)
     for i in range(len(steps)):
-        f.write("<li>%s</li>"%(steps[i]))  
+        f.write("<li>%s</li>" % (steps[i]))
     f.write("""
        </ol>
       <button onclick="window.print()">print recipie</button>
@@ -60,7 +60,8 @@ def html(recipie_name, recipie_desc, ingredients, steps):
  </html>
      """)
     f.close()
-    
+
+
 def css():
     f = open("index.css", "w")
     f.write("""
@@ -111,6 +112,7 @@ ol{
     
     """)
     f.close()
+
 
 if __name__ == "__main__":
     main()
